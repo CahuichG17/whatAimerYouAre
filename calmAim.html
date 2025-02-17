@@ -3,83 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Que tipo de aimer eres</title>
+    <title>¿Qué tipo de aimer eres?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Rajdhani', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: url('https://www.veracruz.mx/wp-content/uploads/2020/01/Veracruz.jpg') center/cover no-repeat;
+            background: url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/37250329/5e3f507139e9c0efb4e07b4e5f9c502d3a24e38e.png') center/cover no-repeat;
             background-attachment: fixed;
+            color: #fff;
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            background: rgba(15, 15, 15, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 60, 0.7);
             width: 90%;
             max-width: 600px;
             text-align: center;
             animation: fadeIn 1s ease-in-out;
-            margin: 20px;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
         h1 {
-            color: #007b5e;
-            font-size: 28px;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-        }
-        .breadcrumb {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .breadcrumb a {
-            color: #007b5e;
-            text-decoration: none;
-            margin: 0 5px;
-            font-weight: bold;
-        }
-        .breadcrumb a:hover {
-            text-decoration: underline;
+            color: #ff4655;
+            font-size: 32px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(255, 0, 60, 0.8);
         }
         .question {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-align: left;
-            background-color: #fff;
+            background: rgba(30, 30, 30, 0.8);
             padding: 15px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #ff4655;
+            box-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
         }
         .question label {
             display: block;
-            margin-bottom: 5px;
             font-weight: bold;
-            color: #333;
+            color: #fff;
         }
         .question input[type="radio"] {
             margin-right: 10px;
+            accent-color: #ff4655;
         }
         button {
-            background-color: #007b5e;
+            background: linear-gradient(90deg, #ff4655, #d40c43);
             color: #fff;
             border: none;
-            padding: 10px 25px;
+            padding: 12px 30px;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(255, 0, 60, 0.7);
         }
         button:hover {
-            background-color: #005f46;
+            background: #a30b36;
+            box-shadow: 0 0 25px rgba(255, 0, 60, 1);
         }
         .modal {
             display: none;
@@ -90,111 +82,46 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.8);
         }
         .modal-content {
-            background-color: #fff;
+            background: #111;
             margin: 15% auto;
             padding: 20px;
-            border: 1px solid #888;
+            border: 2px solid #ff4655;
             width: 80%;
             max-width: 400px;
             border-radius: 8px;
             text-align: center;
-            animation: slideIn 0.5s ease-in-out;
+            color: #fff;
+            animation: zoomIn 0.5s ease-in-out;
         }
-        @keyframes slideIn {
-            from { transform: translateY(-30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
         .close {
-            color: #888;
+            color: #ff4655;
             float: right;
             font-size: 28px;
             font-weight: bold;
-        }
-        .close:hover {
-            color: #000;
             cursor: pointer;
         }
         .result {
-            font-size: 18px;
-            color: #007b5e;
+            font-size: 24px;
+            color: #00e0ff;
             margin-top: 20px;
-        }
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-                margin: 10px;
-            }
-            h1 {
-                font-size: 24px;
-            }
-            .question {
-                padding: 10px;
-            }
-            button {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-            .modal-content {
-                width: 90%;
-            }
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #00e0ff;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Que tipo de aimer eres en Valorant</h1>
+        <h1>¿Qué tipo de aimer eres?</h1> 
         <form id="aimForm">
-            <div class="question">
-                <label>1. ¿Cómo describes tu precisión al disparar?</label>
-                <input type="radio" name="q1" value="Calm Aim"> Muy precisa<br>
-                <input type="radio" name="q1" value="Tranquil Aim"> Bastante precisa<br>
-                <input type="radio" name="q1" value="Vibin Aim"> Algo precisa<br>
-                <input type="radio" name="q1" value="Descontrolado Aim"> Poco precisa<br>
-                <input type="radio" name="q1" value="Apuntado Calmado"> Muy poco precisa<br>
-            </div>
-            <div class="question">
-                <label>2. ¿Qué tan rápido reaccionas a los enemigos?</label>
-                <input type="radio" name="q2" value="Calm Aim"> Muy rápido<br>
-                <input type="radio" name="q2" value="Tranquil Aim"> Bastante rápido<br>
-                <input type="radio" name="q2" value="Vibin Aim"> Algo rápido<br>
-                <input type="radio" name="q2" value="Descontrolado Aim"> Poco rápido<br>
-                <input type="radio" name="q2" value="Apuntado Calmado"> Muy poco rápido<br>
-            </div>
-            <div class="question">
-                <label>3. ¿Cómo manejas la presión en situaciones de clutch?</label>
-                <input type="radio" name="q3" value="Calm Aim"> Muy bien<br>
-                <input type="radio" name="q3" value="Tranquil Aim"> Bastante bien<br>
-                <input type="radio" name="q3" value="Vibin Aim"> Algo bien<br>
-                <input type="radio" name="q3" value="Descontrolado Aim"> Poco bien<br>
-                <input type="radio" name="q3" value="Apuntado Calmado"> Muy mal<br>
-            </div>
-            <div class="question">
-                <label>4. ¿Qué tan constante es tu puntería durante una partida?</label>
-                <input type="radio" name="q4" value="Calm Aim"> Muy constante<br>
-                <input type="radio" name="q4" value="Tranquil Aim"> Bastante constante<br>
-                <input type="radio" name="q4" value="Vibin Aim"> Algo constante<br>
-                <input type="radio" name="q4" value="Descontrolado Aim"> Poco constante<br>
-                <input type="radio" name="q4" value="Apuntado Calmado"> Muy inconstante<br>
-            </div>
-            <div class="question">
-                <label>5. ¿Cómo describes tu control del retroceso?</label>
-                <input type="radio" name="q5" value="Calm Aim"> Muy bueno<br>
-                <input type="radio" name="q5" value="Tranquil Aim"> Bastante bueno<br>
-                <input type="radio" name="q5" value="Vibin Aim"> Algo bueno<br>
-                <input type="radio" name="q5" value="Descontrolado Aim"> Poco bueno<br>
-                <input type="radio" name="q5" value="Apuntado Calmado"> Muy malo<br>
-            </div>
-            <div class="question">
-                <label>6. ¿Qué tan probable es que bombardeen Veracruz?</label>
-                <input type="radio" name="q6" value="Calm Aim"> Muy probable<br>
-                <input type="radio" name="q6" value="Tranquil Aim"> Bastante probable<br>
-                <input type="radio" name="q6" value="Vibin Aim"> Algo probable<br>
-                <input type="radio" name="q6" value="Descontrolado Aim"> Poco probable<br>
-                <input type="radio" name="q6" value="Apuntado Calmado"> Muy poco probable<br>
-            </div>
+            <div id="questions"></div>
             <button type="button" onclick="calculateResult()">Enviar</button>
         </form>
     </div>
@@ -202,49 +129,51 @@
     <div id="resultModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <p id="resultText"></p>
+            <p id="resultText" class="result"></p>
         </div>
     </div>
 
     <script>
+        const questions = [
+            "¿Cómo describes tu precisión al disparar?",
+            "¿Qué tan rápido reaccionas a los enemigos?",
+            "¿Cómo manejas la presión en situaciones de clutch?",
+            "¿Qué tan constante es tu puntería durante una partida?",
+            "¿Cómo describes tu control del retroceso?",
+            "¿Qué tan probable es que bombardeen Veracruz?"
+        ];
+
+        const aimTypes = ["Calm Aim", "Tranquil Aim", "Vibin Aim", "Descontrolado Aim", "Apuntado Calmado"];
+        
+        let questionsHtml = "";
+        questions.forEach((q, i) => {
+            questionsHtml += `<div class='question'><label>${i + 1}. ${q}</label>`;
+            aimTypes.forEach(type => {
+                questionsHtml += `<input type='radio' name='q${i + 1}' value='${type}'> ${type}<br>`;
+            });
+            questionsHtml += "</div>";
+        });
+        document.getElementById("questions").innerHTML = questionsHtml;
+
         function calculateResult() {
             const form = document.getElementById('aimForm');
             const resultText = document.getElementById('resultText');
             const modal = document.getElementById('resultModal');
             const answers = new FormData(form);
-            const counts = {
-                'Calm Aim': 0,
-                'Tranquil Aim': 0,
-                'Vibin Aim': 0,
-                'Descontrolado Aim': 0,
-                'Apuntado Calmado': 0
-            };
-
+            const counts = {};
+            aimTypes.forEach(type => counts[type] = 0);
+            
             for (let value of answers.values()) {
                 counts[value]++;
             }
 
-            let maxCount = 0;
-            let aimType = '';
-            for (let [key, value] of Object.entries(counts)) {
-                if (value > maxCount) {
-                    maxCount = value;
-                    aimType = key;
-                }
-            }
+            let aimType = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
             resultText.textContent = `Tu tipo de Aim es: ${aimType}`;
             modal.style.display = "block";
         }
 
         function closeModal() {
             document.getElementById('resultModal').style.display = "none";
-        }
-
-        window.onclick = (e) => {
-            const modal = document.getElementById('resultModal');
-            if (e.target == modal) {
-                modal.style.display = "none";
-            }
         }
     </script>
 </body>
